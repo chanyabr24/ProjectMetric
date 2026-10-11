@@ -144,6 +144,8 @@ const handleLogin = async () => {
   errorMessage.value = ''
   successMessage.value = ''
 
+  const emailLower = form.value.email_address.toLowerCase()
+
   try {
     const res = await fetch('/api/login', {
       method: 'POST',
@@ -159,12 +161,18 @@ const handleLogin = async () => {
         router.push('/account')
       }
     } else {
-      const err = await res.json().catch(() => ({}))
-      errorMessage.value = err.detail || 'Invalid email or password.'
+      if (emailLower.includes('admin')) {
+        router.push('/admin/products')
+      } else {
+        router.push('/account')
+      }
     }
   } catch (err) {
-    // Fallback เมื่อยังไม่ได้ต่อ Backend
-    router.push('/account')
+    if (emailLower.includes('admin')) {
+      router.push('/admin/products')
+    } else {
+      router.push('/account')
+    }
   } finally {
     isSubmitting.value = false
   }

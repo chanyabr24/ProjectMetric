@@ -15,6 +15,12 @@ import LoginView from '@/views/auth/LoginView.vue'
 import RegisterView from '@/views/auth/RegisterView.vue'
 import ResetPasswordView from '@/views/auth/ResetPasswordView.vue'
 import VerifyCodeView from '@/views/auth/VerifyCodeView.vue'
+import AdminAccountView from '@/views/admin/AdminAccountView.vue'
+import AdminCategoriesView from '@/views/admin/AdminCategoriesVIew.vue'
+import AdminCategoryFormView from '@/views/admin/AdminCategoryFormView.vue'
+import AdminProductsView from '@/views/admin/AdminProductsView.vue'
+import AdminProductFormView from '@/views/admin/AdminProductFormView.vue'
+import AdminSalesView from '@/views/admin/AdminSalesView.vue'
 
 
 
@@ -84,6 +90,30 @@ const routes = [
   { path: '/order-complete', 
     name: 'order-complete', 
     component: OrderCompleteView 
+  },
+  { path: '/admin/account', 
+    name: 'admin-account', 
+    component: AdminAccountView 
+  },
+  { path: '/admin/categories',
+    name: 'admin-categories', 
+    component: AdminCategoriesView 
+  },
+  { path: '/admin/category-form', 
+    name: 'admin-category-form', 
+    component: AdminCategoryFormView 
+  },
+  { path: '/admin/products', 
+    name: 'admin-products', 
+    component: AdminProductsView 
+  },
+  { path: '/admin/product-form', 
+    name: 'admin-product-form', 
+    component: AdminProductFormView 
+  },
+  { path: '/admin/sales', 
+    name: 'admin-sales', 
+    component: AdminSalesView 
   }
 
 
