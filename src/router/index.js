@@ -5,6 +5,13 @@ import NewView from '@/views/NewView.vue'
 import MenView from '@/views/MenView.vue'
 import BoysView from '@/views/BoysView.vue'
 import GirlsView from '@/views/GirlsView.vue'
+import AccountView from '@/views/AccountView.vue'
+import CartView from '@/views/CartView.vue'
+import CheckoutView from '@/views/CheckoutView.vue'
+import ContactView from '@/views/ContactView.vue'
+import OrderCompleteView from '@/views/OrderCompleteView.vue'
+import ProductDetailView from '@/views/ProductDetailView.vue'
+
 
 
 const routes = [
@@ -34,6 +41,30 @@ const routes = [
     name: 'girls', 
     component: GirlsView 
   },
+  { path: '/product/:id', 
+    name: 'product-detail', 
+    component: ProductDetailView 
+  },
+  { path: '/account', 
+    name: 'account', 
+    component: AccountView 
+  },
+  { path: '/cart', 
+    name: 'cart', 
+    component: CartView 
+  },
+  { path: '/checkout', 
+    name: 'checkout', 
+    component: CheckoutView 
+  },
+  { path: '/contact',
+    name: 'contact', 
+    component: ContactView 
+  },
+  { path: '/order-complete', 
+    name: 'order-complete', 
+    component: OrderCompleteView 
+  }
 
 
 ]
