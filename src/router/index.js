@@ -11,10 +11,30 @@ import CheckoutView from '@/views/CheckoutView.vue'
 import ContactView from '@/views/ContactView.vue'
 import OrderCompleteView from '@/views/OrderCompleteView.vue'
 import ProductDetailView from '@/views/ProductDetailView.vue'
+import LoginView from '@/views/auth/LoginView.vue'
+import RegisterView from '@/views/auth/RegisterView.vue'
+import ResetPasswordView from '@/views/auth/ResetPasswordView.vue'
+import VerifyCodeView from '@/views/auth/VerifyCodeView.vue'
 
 
 
 const routes = [
+  { path: '/login', 
+    name: 'login', 
+    component: LoginView 
+  },
+  { path: '/register', 
+    name: 'register', 
+    component: RegisterView 
+  },
+  { path: '/reset-password', 
+    name: 'reset-password', 
+    component: ResetPasswordView 
+  },
+  { path: '/verify-code', 
+    name: 'verify-code', 
+    component: VerifyCodeView 
+  },
   {
     path: '/',
     name: 'home',
